@@ -10,3 +10,5 @@ docker-compose up -d
 
 ## docs 
 [api명세서](docs/API_SPCE.md)
+
+[ERD다이어그램](docs/ERD.md)
