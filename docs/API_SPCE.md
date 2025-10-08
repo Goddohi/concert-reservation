@@ -138,9 +138,9 @@ Accept: application/json
  "totalSeats": 50,
  "availableCount": 34,
  "seats": [
-  { "seatNo": 1 },
-  { "seatNo": 2 },
-  { "seatNo": 5 }
+  { "seatNo": 1 , "grade" : 'SKYLOUNGE'},
+  { "seatNo": 2 , "grade" : 'A2'},
+  { "seatNo": 5 , "grade" : 'C3'}
  ]
 }
 ```
@@ -163,10 +163,11 @@ Content-Type: application/json
   "concertId": "10421",
   "scheduleId": "12378",
   "seats": [
-    { "seatNo": 12 },
-    { "seatNo": 13 },
-    { "seatNo": 14 }
+    { "seatNo": 12 , "grade" : 'B2', "price" : 130000},
+    { "seatNo": 13 , "grade" : 'B2', "price" : 130000},
+    { "seatNo": 14 , "grade" : 'B2', "price" : 130000}
   ],
+  
   "heldUntil": "2025-09-07T19:05:00+09:00"
 }
 ```
@@ -231,6 +232,7 @@ Queue-Token: <issued_token>
 Content-Type: application/json
 {
   "userId": "uuid",
+  "reservation_id": "123124",
   "amount": 150000,
   "methods": [
     { "type": "POINT", "amount": 50000 },
@@ -242,6 +244,7 @@ Content-Type: application/json
 ```
 {
   "paymentId": "123124",
+  "reservation_id": "123124",
   "userId": "uuid",
   "amount": 150000,
   "status": "COMPLETED",
